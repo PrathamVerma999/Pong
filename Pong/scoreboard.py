@@ -29,3 +29,10 @@ class Scoreboard(Turtle):
         self.r_score += 1
         self.update_scoreboard()
     
+    def print_score(self):
+        self.goto(x=0, y=0)
+        if self.l_score == 10:
+            self.write("The left player won!", align="center", font=("Courier", 40, "normal"))
+        elif self.r_score == 10:
+            self.write("The right player won!", align="center", font=("Courier", 40, "normal"))
+    

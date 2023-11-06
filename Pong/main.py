@@ -53,5 +53,12 @@ while game_is_on:
     if ball.xcor() < -400:
         ball.reset()
         scoreboard.r_point()
+    
+    if scoreboard.l_score == 10:
+        game_is_on = False
+        scoreboard.print_score()
+    elif scoreboard.r_score == 10:
+        game_is_on = False
+        scoreboard.print_score()
 
 screen.exitonclick()
